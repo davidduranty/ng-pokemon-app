@@ -7,23 +7,31 @@ import { Pokemon } from './pokemon';
   selector: 'app-root',
   standalone: true,
   // imports: [RouterOutlet],
-  template: `
-    <h1>Liste de Pokemons!</h1>
-    
-    
+  templateUrl:'app.component.html'
 
-    <!-- <router-outlet /> -->
-  `
 })
 export class AppComponent implements OnInit {
   pokemonList: Pokemon[] = POKEMONS;
 
+  pokemonSelected: Pokemon|undefined;
+
   ngOnInit() {
     console.table(this.pokemonList);
-    this.selectPokemon(this.pokemonList[4])
+    
   }
 
-  selectPokemon(pokemon: Pokemon) {
-    console.log(`Vous avez cliqué sur le pokemon ${pokemon.name}`);
+  selectPokemon(pokemonId: string) {
+    const pokemon: Pokemon | undefined = this.pokemonList.find(pokemon => pokemon.id == +pokemonId)
+    // if (pokemon) {
+    //   console.log(`Vous avez demandé le pokémon ${pokemon.name}`);
+    //   this.pokemonSelected = pokemon;
+    // } else {
+    //   console.log(`Vous avez demandé un pokemon qui n'existe pas`);
+    //   this.pokemonSelected = pokemon
+    // }
+    this.pokemonSelected = pokemon ? pokemon : undefined;
+  console.log(pokemon 
+    ? `Vous avez cliqué sur le pokemon ${pokemon.name}`
+    : `Vous avez demandé un pokémon qui n'existe pas`);
   }
 }
