@@ -10,32 +10,6 @@
 </p>
 
 <p *ngIf="!pokemonSelected">Vous n'avez pas selectionné un pokémon</p> -->
-<div class="container">
-  <div class="row">
-    <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
-      <div class="card horizontale" pkmnBorderCard background="red">
-        <div class="card-image">
-          <img [src]="pokemon.picture" alt="{{ pokemon.name }}" class="w0" />
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p>
-              {{ pokemon.name }}
-            </p>
-            <p>
-              {{ pokemon.created | date : "dd/MM/yyyy" }}
-            </p>
-            <span
-              *ngFor="let type of pokemon.types"
-              class="{{ type | pokemonTypeColor }}"
-            >
-              {{ type }}
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
 
 <!-- <router-outlet /> -->
