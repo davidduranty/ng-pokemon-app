@@ -4,60 +4,109 @@ export const POKEMONS: Pokemon[] = [
     {
         id: 1,
         name: "Bulbizarre",
-        hp: 35,
+        hp: 25,
         cp: 5,
-        picture: "https://tse3.mm.bing.net/th?id=OIP.MXsG1RjbV11-fzltnz2fyAHaG5&pid=Api&P=0&h=180",
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
         types: ["Plante", "Poison"],
         created: new Date()
     },
     {
         id: 2,
-        name: "Pikatchu",
-        hp: 92,
-        cp: 29,
-        picture: "https://tse4.mm.bing.net/th?id=OIP.IQGn_r6LA0KcAMLeAyBBUwHaH8&pid=Api&P=0&h=180",
-        types: ["Electrik"],
+        name: "Salamèche",
+        hp: 28,
+        cp: 6,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
+        types: ["Feu"],
         created: new Date()
-
     },
     {
         id: 3,
-        name: "Salamèche",
-        hp: 50,
-        cp: 18,
-        picture: "https://tse1.explicit.bing.net/th?id=OIP.ISv-7XC37r3xDVHox73iqgHaI6&pid=Api&P=0&h=180",
-        types: ["Feu"],
+        name: "Carapuce",
+        hp: 21,
+        cp: 4,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
+        types: ["Eau"],
         created: new Date()
-
     },
     {
         id: 4,
-        name: "Litléo",
-        hp: 62,
-        cp: 10,
-        picture: "https://tse1.mm.bing.net/th?id=OIP.9vrUuKdde55aJ-yCACZl5QHaG1&pid=Api&P=0&h=180",
-        types: ["Normal", "Feu"],
+        name: "Aspicot",
+        hp: 16,
+        cp: 2,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/013.png",
+        types: ["Insecte", "Poison"],
         created: new Date()
-
     },
     {
         id: 5,
-        name: "Pilplup",
-        hp: 39,
-        cp: 2,
-        picture: "https://tse3.mm.bing.net/th?id=OIP.XqgFnwIny68ttIkZLGeIzQHaG1&pid=Api&P=0&h=180",
-        types: ["Fée"],
+        name: "Roucool",
+        hp: 30,
+        cp: 7,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png",
+        types: ["Normal", "Vol"],
         created: new Date()
-
     },
     {
         id: 6,
-        name: "Marill",
-        hp: 22,
-        cp: 12,
-        picture: "https://tse4.mm.bing.net/th?id=OIP.pkVvxUlwIdJRnmaHUTKZOwHaG1&pid=Api&P=0&h=180",
-        types: ["Impact"],
+        name: "Rattata",
+        hp: 18,
+        cp: 6,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/019.png",
+        types: ["Normal"],
         created: new Date()
-
     },
-]
+    {
+        id: 7,
+        name: "Piafabec",
+        hp: 14,
+        cp: 5,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/021.png",
+        types: ["Normal", "Vol"],
+        created: new Date()
+    },
+    {
+        id: 8,
+        name: "Abo",
+        hp: 16,
+        cp: 4,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/023.png",
+        types: ["Poison"],
+        created: new Date()
+    },
+    {
+        id: 9,
+        name: "Pikachu",
+        hp: 21,
+        cp: 7,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png",
+        types: ["Electrik"],
+        created: new Date()
+    },
+    {
+        id: 10,
+        name: "Sabelette",
+        hp: 19,
+        cp: 3,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/027.png",
+        types: ["Normal"],
+        created: new Date()
+    },
+    {
+        id: 11,
+        name: "Mélofée",
+        hp: 25,
+        cp: 5,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png",
+        types: ["Fée"],
+        created: new Date()
+    },
+    {
+        id: 12,
+        name: "Groupix",
+        hp: 17,
+        cp: 8,
+        picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png",
+        types: ["Feu"],
+        created: new Date()
+    }
+];

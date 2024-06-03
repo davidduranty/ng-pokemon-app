@@ -3,6 +3,7 @@ import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
 import { CommonModule } from '@angular/common';
 import { BorderCardDirective } from './border-card.directive';
+import {PokemonTypeColorPipe} from './pokemon-type-color.pipe';
 
 // import { RouterOutlet } from '@angular/router';
 
@@ -11,7 +12,7 @@ import { BorderCardDirective } from './border-card.directive';
   standalone: true,
   // imports: [RouterOutlet],
   templateUrl: 'app.component.html',
-  imports: [CommonModule, BorderCardDirective]
+  imports: [CommonModule, BorderCardDirective, PokemonTypeColorPipe]
 
 })
 export class AppComponent implements OnInit {
