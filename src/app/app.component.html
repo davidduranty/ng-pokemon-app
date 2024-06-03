@@ -1,16 +1,35 @@
-<h1>Liste de Pokemons!</h1>
-<input
+<h1 class="center">Liste de Pokemons!</h1>
+<!-- <input
   #input
-  (keyup)="selectPokemon(input.value)"
+  (keyup.enter)="selectPokemon(input.value)"
   type="number"
   placeholder="Merci de renseigner index du pokemon"
 />
-<p>{{ pokemonSelected?.name }}</p>
-<p>{{ pokemonList[0].name }}</p>
-<p>{{ pokemonList[1].name }}</p>
-<p>{{ pokemonList[2].name }}</p>
-<p>{{ pokemonList[3].name }}</p>
-<p>{{ pokemonList[4].name }}</p>
-<p>{{ pokemonList[5].name }}</p>
+<p *ngIf="pokemonSelected">
+  Vous avez selectionné un pokémon: {{ pokemonSelected?.name }}
+</p>
+
+<p *ngIf="!pokemonSelected">Vous n'avez pas selectionné un pokémon</p> -->
+<div class="container">
+  <div class="row">
+    <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
+      <div class="card horizontale" pkmnBorderCard>
+        <div class="card-image">
+          <img [src]="pokemon.picture" alt="{{ pokemon.name }}" class="w0" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>
+              {{ pokemon.name }}
+            </p>
+            <p>
+              {{ pokemon.created }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- <router-outlet /> -->

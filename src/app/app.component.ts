@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
+import { CommonModule } from '@angular/common';
+import { BorderCardDirective } from './border-card.directive';
+
 // import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   // imports: [RouterOutlet],
-  templateUrl:'app.component.html'
+  templateUrl: 'app.component.html',
+  imports: [CommonModule, BorderCardDirective]
 
 })
 export class AppComponent implements OnInit {
