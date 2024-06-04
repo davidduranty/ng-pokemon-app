@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Pokemon } from '../pokemon';
-
 import { CommonModule } from '@angular/common';
 import { BorderCardDirective } from '../border-card.directive';
 import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
@@ -15,6 +14,7 @@ import { PokemonService } from '../pokemon.service';
   standalone: true,
   imports: [CommonModule, BorderCardDirective, PokemonTypeColorPipe,RouterModule],
   templateUrl: './detail-pokemon.component.html',
+  providers:[PokemonService]
   
 })
 export class DetailPokemonComponent implements OnInit {

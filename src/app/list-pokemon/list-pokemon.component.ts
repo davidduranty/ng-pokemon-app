@@ -12,6 +12,7 @@ import { PokemonService } from '../pokemon.service';
   standalone: true,
   imports: [CommonModule, BorderCardDirective, PokemonTypeColorPipe, RouterModule],
   templateUrl: './list-pokemon.component.html',
+  providers:[PokemonService]
   
 })
 export class ListPokemonComponent implements OnInit {
