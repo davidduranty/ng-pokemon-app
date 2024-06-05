@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   // imports: [RouterOutlet],
   templateUrl: 'app.component.html',
-  imports: [ RouterModule]
+  imports: [ RouterModule ]
 
 })
 export class AppComponent  {

@@ -67,27 +67,29 @@
         </div>
 
         <!-- Pokemon types -->
-        <form class="form-group">
-          <label for="types">Types</label>
-          <p *ngFor="let type of types">
-            <label>
-              <input
-                type="checkbox"
-                class="filled-in"
-                id="{{ type }}"
-                [value]="type"
-                [checked]="hasType(type)"
-                [disabled]="!isTypesValid(type)"
-                (change)="selectType($event, type)"
-              />
-              <span [attr.for]="type">
-                <div class="{{ type | pokemonTypeColor }}">
-                  {{ type }}
-                </div>
-              </span>
-            </label>
-          </p>
-        </form>
+        <div class="form-group">
+          <form>
+            <label for="types">Types</label>
+            <p *ngFor="let type of types">
+              <label>
+                <input
+                  type="checkbox"
+                  class="filled-in"
+                  id="{{ type }}"
+                  [value]="type"
+                  [checked]="hasType(type)"
+                  [disabled]="!isTypesValid(type)"
+                  (change)="selectType($event, type)"
+                />
+                <span [attr.for]="type">
+                  <div class="{{ type | pokemonTypeColor }}">
+                    {{ type }}
+                  </div>
+                </span>
+              </label>
+            </p>
+          </form>
+        </div>
 
         <!-- Submit button -->
         <div class="divider"></div>

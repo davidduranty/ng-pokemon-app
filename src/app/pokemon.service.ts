@@ -16,4 +16,10 @@ export class PokemonService {
   getPokemonTypeList(): string[] {
     return ['Plante', 'Feu', 'Eau', 'Insecte', 'Normal', 'Electrik', 'Poison', 'Fée', 'Vol', 'Combat', 'Psy'];
   }
+  updatePokemon(pokemon: Pokemon): void {
+    const index = POKEMONS.findIndex(p => p.id === pokemon.id);
+    if (index !== -1) {
+      POKEMONS[index] = pokemon;
+    }
+  }
 }

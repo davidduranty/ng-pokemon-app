@@ -12,6 +12,7 @@ import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
   standalone: true,
   imports: [FormsModule, CommonModule, PokemonTypeColorPipe],
   templateUrl: './pokemon-form.component.html',
+  styleUrls: ['./pokemon-form.component.css']
 })
 export class PokemonFormComponent implements OnInit{
   @Input() pokemon: Pokemon;
