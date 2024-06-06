@@ -1,25 +1,43 @@
 import { Injectable } from '@angular/core';
 import { Pokemon } from './pokemon';
-import { POKEMONS } from './mock-pokemon-list';
+import { HttpClient } from '@angular/common/http';
+import { Observable, catchError, of, tap } from 'rxjs';
 
 @Injectable()
 export class PokemonService {
 
-  getPokemonList(): Pokemon[] {
-    return POKEMONS
+  constructor(private http: HttpClient) {}
+
+  getPokemonList(): Observable <Pokemon[]> {
+    return this.http.get<Pokemon[]>('api/pokemons').pipe(
+      tap((res) => this.log(res)),
+      catchError((error) => this.handleError(error,[]))
+    );
   }
 
-  getPokemonById(PokemonId: number): Pokemon | undefined {
-    return POKEMONS.find(pokemon => pokemon.id == PokemonId);
+  getPokemonById(PokemonId: number): Observable<Pokemon | undefined> {
+    return this.http.get<Pokemon>(`api/pokemons/${PokemonId}`).pipe(
+      tap((res) => this.log(res)),
+      catchError((error) => this.handleError(error, undefined))
+    );
+  }
+
+  private log(res: Pokemon[] | Pokemon | undefined) {
+    console.table(res);
+  }
+
+  private handleError(error: Error, errorValue: any) {
+    console.error(error);
+    return of(errorValue);
   }
 
   getPokemonTypeList(): string[] {
     return ['Plante', 'Feu', 'Eau', 'Insecte', 'Normal', 'Electrik', 'Poison', 'Fée', 'Vol', 'Combat', 'Psy'];
   }
-  updatePokemon(pokemon: Pokemon): void {
-    const index = POKEMONS.findIndex(p => p.id === pokemon.id);
-    if (index !== -1) {
-      POKEMONS[index] = pokemon;
-    }
-  }
+  // updatePokemon(pokemon: Pokemon): void {
+  //   const index = POKEMONS.findIndex(p => p.id === pokemon.id);
+  //   if (index !== -1) {
+  //     POKEMONS[index] = pokemon;
+  //   }
+  // }
 }
